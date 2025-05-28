@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta title="Marieswaran | Full Stack Developer" />
+    <title>Marieswaran | Full Stack Developer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="container nav-container">
+        <div class="brand">Marieswaran</div>
+        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        <div class="menu" id="menu">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="container">
+        <h1>Marieswaran Balasubramanian</h1>
+        <p>Full Stack Developer | React.js | Next.js | Node.js | TypeScript</p>
+      </div>
+    </header>
+
+    <section id="about" class="container card">
+      <h2>About Me</h2>
+      <p>
+        Full Stack Developer | 2.8 Years of Experience Proficient in developing
+        and maintaining high-quality web applications. Skilled in both front-end
+        and back-end technologies. Implementing innovative solutions and
+        consistently delivering projects within tight deadlines. Passionate
+        about staying updated with emerging trends in the field.
+      </p>
+      <a href="./MarieswaranResume.pdf" class="btn" download>Download Resume</a>
+    </section>
+
+    <section id="projects" class="container card">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>Joult Health</h3>
+        <p>
+          Full-Stack Web Application Development<br />
+          Developed and supported web application with the MERN stack,
+          consisting of MYSQL, Express.js, React, and Node.js, further combined
+          with Next.js for server-side rendering and efficiency. Designed
+          responsive, accessible user interfaces with best performance.<br />
+          Developed feature-rich user and admin dashboards, incorporating
+          role-based access control and intuitive workflows to enhance user
+          experience and administrative efficiency.
+        </p>
+        <a href="https://www.joinjoult.com" target="_blank">Visit Project</a>
+      </div>
+
+      <div class="project">
+        <h3>US DOT Program</h3>
+        <p>
+          Healthcare, Drug & Alcohol Testing, and DOT Consortium Solutions<br />
+          Developed fully-fledged solutions specifically tailored for the
+          healthcare, drug and alcohol testing industry, as well as for the
+          needs of a DOT consortium. Collaborated very closely with the team in
+          establishing business requirements and delivering applicable
+          functionalities within specified timelines.
+        </p>
+        <a href="https://www.usdotprogram.com" target="_blank">Visit Project</a>
+      </div>
+
+      <div class="project card">
+        <h3>CircleDNA</h3>
+        <p>
+          Full-Stack Web Application Development<br />
+          Developed and maintained a web application using the PERN stack
+          (PostgreSQL, Express.js, React, Node.js) combined with Next.js to
+          leverage server-side rendering and improve performance.<br />
+          Designed and implemented responsive, visually appealing user
+          interfaces optimized for accessibility and performance. The frontend
+          applications were seamlessly integrated with multiple microservices
+          through RESTful APIs, ensuring a robust and efficient architecture.
+        </p>
+        <a href="https://circledna.com/en" target="_blank">Visit Project</a>
+      </div>
+    </section>
+
+    <section id="contact" class="container card">
+      <h2>Contact Me</h2>
+      <form onsubmit="onSubmit(event)">
+        <input type="text" placeholder="Your Name" required id="contact-name" />
+        <input
+          type="email"
+          placeholder="Your Email"
+          required
+          id="contact-email"
+        />
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Marieswaran. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("menu");
+      const menuLinks = document.querySelectorAll("#menu a");
+
+      menuToggle.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+
+      menuLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menu.classList.remove("active");
+        });
+      });
+
+      function onSubmit(e) {
+        e.preventDefault();
+        alert("Thank you for your submission.");
+        document.getElementById("contact-name").value = "";
+        document.getElementById("contact-email").value = "";
+      }
+    </script>
+  </body>
+</html>
